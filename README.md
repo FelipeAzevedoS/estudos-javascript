@@ -19,3 +19,8 @@ Uma página com um botão que, ao clicar, gera um código Hex aleatório e muda 
 Uma página com um botão que ao clicar revela o texto escondido e altera o nome do botão.
 
 **Conceitos praticados:** classList e seus métodos, condicional if/else, estado de um componente, separação de reponsabilidades entre JS e CSS.
+
+### Projeto 04 - Contador de cliques
+Página com um contador e com três botões que alteram o valor e a cor do número na tela a cada clique, com a cor correspondendo ao valor (verde para positivo, vermelho para negativo, cinza para zero).
+
+**Conceitos praticados:** Funções com parâmetros e argumentos, responsabilidade única de funções, Evitando repetição (DRY), Manipulação de classes CSS, variável de estado, condicional.

@@ -19,4 +19,9 @@ botaoZerar.addEventListener('click', function() {
 function atualizaNumero (novoValor) {
     contador = novoValor;
     numero.textContent = contador;
+
+    numero.classList.remove("positivo", "negativo", "zero");
+    if(contador > 0) numero.classList.add("positivo");
+    if(contador === 0) numero.classList.add("zero");
+    if(contador < 0) numero.classList.add("negativo");
 };
