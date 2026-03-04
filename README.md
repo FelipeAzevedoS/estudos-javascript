@@ -24,3 +24,8 @@ Uma página com um botão que ao clicar revela o texto escondido e altera o nome
 Página com um contador e com três botões que alteram o valor e a cor do número na tela a cada clique, com a cor correspondendo ao valor (verde para positivo, vermelho para negativo, cinza para zero).
 
 **Conceitos praticados:** Funções com parâmetros e argumentos, responsabilidade única de funções, Evitando repetição (DRY), Manipulação de classes CSS, variável de estado, condicional.
+
+### Projeto 05 - Calculadora de IMC
+Página que calcula e classifica o IMC da pessoa com base no peso e altura inseridos.
+
+**Conceitos praticados:** Captura de valor de inputs, conversão de tipos, validação de dados, "return" como interruptor, ordem de execução (posicionamento correto da validação), condicional, gerenciamento de estado da interface.
