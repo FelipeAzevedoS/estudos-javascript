@@ -5,9 +5,17 @@ let imcCalculado = document.getElementById('imcCalculado');
 let classificacao = document.getElementById('classificacao');
 
 botao.addEventListener('click', function() {
+    if(isNaN(Number(peso.value)) || isNaN(Number(altura.value))) {
+        imcCalculado.innerText = '* insira corretamente os números';
+        classificacao.innerText = '';
+        imcCalculado.classList.add('erro');
+        return
+    }
+
     let imc = parseFloat(peso.value) / (parseFloat(altura.value) * parseFloat(altura.value));
     imcCalculado.innerText = imc.toFixed(2);
-
+ 
+    imcCalculado.classList.remove('erro');
     if(imc < 18.5) {
         classificacao.innerText = "Classificação: Magreza";
     } else if (imc >= 18.5 && imc < 24.9) {
