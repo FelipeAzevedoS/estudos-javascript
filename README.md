@@ -29,3 +29,8 @@ Página com um contador e com três botões que alteram o valor e a cor do núme
 Página que calcula e classifica o IMC da pessoa com base no peso e altura inseridos.
 
 **Conceitos praticados:** Captura de valor de inputs, conversão de tipos, validação de dados, "return" como interruptor, ordem de execução (posicionamento correto da validação), condicional, gerenciamento de estado da interface.
+
+### Projeto 06 - Gerador de senha aleatória
+Gera uma senha aleatória com letras, números e símbolos com a quantidade de caracteres escolhidas pelo usuário.
+
+**Conceitos praticados:** Funções que retornam valores, valores "truthy e "falsy", separação entre validação e execução.
