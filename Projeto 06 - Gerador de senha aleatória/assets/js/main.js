@@ -7,7 +7,11 @@ let tamanho = document.getElementById('tamanho');
 gerarSenha.addEventListener('click', function() {
     senha.innerText = '';
     for (let i = 0; i < tamanho.value; i++) {
-        let aleatorio = Math.floor(Math.random() * (caracteresSenha.length - 0) + 0);
+        let aleatorio = Math.floor(Math.random() * (caracteresSenha.length));
         senha.innerText += caracteresSenha[aleatorio];
         };
+});
+
+copiarSenha.addEventListener('click', function () {
+    navigator.clipboard.writeText(senha.innerText);
 });
