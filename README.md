@@ -34,3 +34,8 @@ Página que calcula e classifica o IMC da pessoa com base no peso e altura inser
 Gera uma senha aleatória com letras, números e símbolos com a quantidade de caracteres escolhidas pelo usuário.
 
 **Conceitos praticados:** Funções que retornam valores, valores "truthy e "falsy", separação entre validação e execução.
+
+### Project 07 - Simple Converter
+Convert a number (representing Km) to miles, meters and centimeters.
+
+**Practiced concepts:** Template literals, multiple result elements, responsibility separation between functions, validation with multiple conditions
