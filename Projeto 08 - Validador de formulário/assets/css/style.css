@@ -5,3 +5,11 @@ body {
     height: 90vh;
     flex-direction: column;
 }
+
+span {
+    color: red;
+}
+
+#success{
+    color: green;
+}
