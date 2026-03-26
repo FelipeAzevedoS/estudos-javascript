@@ -38,4 +38,8 @@ Gera uma senha aleatória com letras, números e símbolos com a quantidade de c
 ### Project 07 - Simple Converter
 Convert a number (representing Km) to miles, meters and centimeters.
 
-**Practiced concepts:** Template literals, multiple result elements, responsibility separation between functions, validation with multiple conditions
+**Practiced concepts:** Template literals, multiple result elements, responsibility separation between functions, validation with multiple conditions.
+
+### Project 08 - Form validator
+
+**Practiced concepts:** Form validation, ".includes()" method, multiple independent validation functions, visual feedback for each field.
