@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(128, 128, 206);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+}
+
+button {
+    background-color: rgb(206, 205, 205);
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80px;
+    
+}
+
+.divInformation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
