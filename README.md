@@ -43,3 +43,7 @@ Convert a number (representing Km) to miles, meters and centimeters.
 ### Project 08 - Form validator
 
 **Practiced concepts:** Form validation, ".includes()" method, multiple independent validation functions, visual feedback for each field.
+
+### Project 09 - Rock, paper and scissors
+
+**Practiced concepts:** Arrow functions, functions that communicate between each other, game logic with conditions, variables with persistent state, responsibility separation between multiple functions, querySelector, intentional refactoring, CSS reset and basic styling
