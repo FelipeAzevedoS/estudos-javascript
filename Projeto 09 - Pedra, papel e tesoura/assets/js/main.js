@@ -22,26 +22,22 @@ function machineOption () {
     return result;
 };
 
-buttonRock.addEventListener('click', function() {
+function play (playerChoice) {
     machineChoice.innerText = 'Machine choice:'
     yourChoice.innerText = 'Your choice:'
     const machineResult = machineOption();
 
-    yourChoice.innerText += '🪨';
-});
+    if (playerChoice === 'rock') {
+        yourChoice.innerText += '🪨';
+    } else if (playerChoice === 'paper'){
+        yourChoice.innerText += '📄'
+    } else if (playerChoice === 'scissors'){
+        yourChoice.innerText += '✂️'
+    }
+};
 
-buttonPaper.addEventListener('click', function() {
-    machineChoice.innerText = 'Machine choice:'
-    yourChoice.innerText = 'Your choice:'
-    const machineResult = machineOption();
+buttonRock.addEventListener('click', () => play('rock'));
 
-    yourChoice.innerText += '📄';
-});
+buttonPaper.addEventListener('click', () => play('paper'));
 
-buttonScissors.addEventListener('click', function() {
-    machineChoice.innerText = 'Machine choice:'
-    yourChoice.innerText = 'Your choice:'
-    const machineResult = machineOption();
-
-    yourChoice.innerText += '✂️';
-});
+buttonScissors.addEventListener('click', () => play('scissors'));
