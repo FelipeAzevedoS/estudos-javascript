@@ -7,7 +7,14 @@ const playAgain = document.querySelector('#playAgain');
 
 let randomNum = Math.floor(Math.random() * 100) + 1;
 number.innerText = randomNum;
-console.log(randomNum);
+
+function validateNumber () {
+    if (attempt.value === '' || isNaN(Number(attempt.value))) {
+        result.innerText = 'Insert a number';
+        return false;
+    }
+    return true;
+};
 
 function guessNumber () {
    if (attempt.value > randomNum) {
@@ -21,5 +28,6 @@ function guessNumber () {
 };
 
 guess.addEventListener('click', function() {
+    if(!validateNumber()) return;
     guessNumber();
 });
