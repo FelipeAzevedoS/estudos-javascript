@@ -7,6 +7,7 @@ const playAgain = document.querySelector('#playAgain');
 
 let randomNum = Math.floor(Math.random() * 100) + 1;
 number.innerText = randomNum;
+let attemptCounter = 0;
 
 function validateNumber () {
     if (attempt.value === '' || isNaN(Number(attempt.value))) {
@@ -29,5 +30,7 @@ function guessNumber () {
 
 guess.addEventListener('click', function() {
     if(!validateNumber()) return;
+    attemptCounter++;
+    attemptNumber.innerText = attemptCounter;
     guessNumber();
 });
