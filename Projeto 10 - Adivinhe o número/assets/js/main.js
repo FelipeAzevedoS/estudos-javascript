@@ -35,6 +35,17 @@ function disableElements () {
     }
 };
 
+function resetGame () {
+    randomNum = Math.floor(Math.random() * 100) + 1;
+    attemptCounter = 0;
+    attemptNumber.innerText = '';
+    attempt.value = '';
+    result.innerText = '';
+    result.classList.remove('win');
+    attempt.disabled = false;
+    guess.disabled = false;
+};
+
 guess.addEventListener('click', function() {
     if(!validateNumber()) return;
     attemptCounter++;
@@ -42,3 +53,5 @@ guess.addEventListener('click', function() {
     guessNumber();
     disableElements();
 });
+
+playAgain.addEventListener('click', resetGame);
