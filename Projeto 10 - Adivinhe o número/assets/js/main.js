@@ -28,9 +28,17 @@ function guessNumber () {
    }
 };
 
+function disableElements () {
+    if (Number(attempt.value) === randomNum) {
+        attempt.disabled = true;
+        guess.disabled = true;
+    }
+};
+
 guess.addEventListener('click', function() {
     if(!validateNumber()) return;
     attemptCounter++;
     attemptNumber.innerText = attemptCounter;
     guessNumber();
+    disableElements();
 });
