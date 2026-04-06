@@ -35,6 +35,14 @@ function disableElements () {
     }
 };
 
+function play () {
+    if(!validateNumber()) return;
+    attemptCounter++;
+    attemptNumber.innerText = attemptCounter;
+    guessNumber();
+    disableElements();
+}
+
 function resetGame () {
     randomNum = Math.floor(Math.random() * 100) + 1;
     attemptCounter = 0;
@@ -46,12 +54,6 @@ function resetGame () {
     guess.disabled = false;
 };
 
-guess.addEventListener('click', function() {
-    if(!validateNumber()) return;
-    attemptCounter++;
-    attemptNumber.innerText = attemptCounter;
-    guessNumber();
-    disableElements();
-});
+guess.addEventListener('click', play);
 
 playAgain.addEventListener('click', resetGame);
