@@ -41,9 +41,16 @@ Convert a number (representing Km) to miles, meters and centimeters.
 **Practiced concepts:** Template literals, multiple result elements, responsibility separation between functions, validation with multiple conditions.
 
 ### Project 08 - Form validator
+A page with a simple form used for validation training.
 
 **Practiced concepts:** Form validation, ".includes()" method, multiple independent validation functions, visual feedback for each field.
 
 ### Project 09 - Rock, paper and scissors
+Rock, paper and scissors game, with scoreboard and round results.
 
 **Practiced concepts:** Arrow functions, functions that communicate between each other, game logic with conditions, variables with persistent state, responsibility separation between multiple functions, querySelector, intentional refactoring, CSS reset and basic styling
+
+### Project 10 - Guess the number
+"Guess the number" game that displays results and the number of attempts.
+
+**Practiced concepts:** "disabled" property, function for reset, event listeners referencing named functions, multiple condition input validation.
