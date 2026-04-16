@@ -2,9 +2,12 @@ const question = document.querySelector('#question');
 const ans1 = document.querySelector('#ans1');
 const ans2 = document.querySelector('#ans2');
 const ans3 = document.querySelector('#ans3');
+const winResults = document.querySelector('#winResults');
+const loseResults = document.querySelector('#loseResults');
 const playAgain = document.querySelector('#playAgain');
 
 let questCounter = 0;
+let rightAnswers = 0;
 
 const gameArray = [
     {quest: "What is the capital of Brazil?", option1: "Sao Paulo", option2: "Rio de Janeiro", option3: "Brasilia", answer: "Brasilia"},
@@ -19,19 +22,34 @@ function end() {
     ans1.classList.add('end');
     ans2.classList.add('end');
     ans3.classList.add('end');
+    winResults.classList.remove('end');
+    loseResults.classList.remove('end');
+
+    winResults.innerText = `Right answers: ${rightAnswers}`
+    loseResults.innerText = `Wrong answers: ${5 - rightAnswers}`
 }
 
-function play() {
-    if (questCounter >= 5) {
+function play(event) {
+    if (event) {
+        winCounter(event);
+        questCounter++;
+        if (questCounter >= 5) {
         end();
-        return
+        return;
     }
+   }
     question.innerText = gameArray[questCounter].quest;
     ans1.innerText = gameArray[questCounter].option1;
     ans2.innerText = gameArray[questCounter].option2;
     ans3.innerText = gameArray[questCounter].option3;
-    questCounter++;
 };
+
+function winCounter(event) {
+    if (event.target.innerText === gameArray[questCounter].answer) {
+        console.log('test');
+        rightAnswers++;
+    }
+}
 
 play();
 
