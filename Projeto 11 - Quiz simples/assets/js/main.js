@@ -46,13 +46,30 @@ function play(event) {
 
 function winCounter(event) {
     if (event.target.innerText === gameArray[questCounter].answer) {
-        console.log('test');
         rightAnswers++;
     }
 }
+
+function replay () {
+    questCounter = 0;
+    rightAnswers = 0;
+
+    question.classList.remove('end');
+    ans1.classList.remove('end');
+    ans2.classList.remove('end');
+    ans3.classList.remove('end');
+    winResults.classList.add('end');
+    loseResults.classList.add('end');
+
+    winResults.innerText = ``;
+    loseResults.innerText = ``;
+
+    play();
+};
 
 play();
 
 ans1.addEventListener('click', play);
 ans2.addEventListener('click', play);
 ans3.addEventListener('click', play);
+playAgain.addEventListener('click', replay)
