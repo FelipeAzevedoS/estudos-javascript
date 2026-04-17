@@ -54,3 +54,8 @@ Rock, paper and scissors game, with scoreboard and round results.
 "Guess the number" game that displays results and the number of attempts.
 
 **Practiced concepts:** "disabled" property, function for reset, event listeners referencing named functions, multiple condition input validation.
+
+### Project 11 - Simple Quiz
+Web page containing a simple quiz about Brazil.
+
+**Practiced concepts:** Array of objects, object property access, event and event.target, optional parameter with conditional check, full state reset.
