@@ -10,6 +10,8 @@ let timerFunctionality;
         
 function inputToTime() {
     clearInterval(timerFunctionality);
+    timer.classList.remove('end');
+
     currentTime = Number(timeInput.value) * 60;
     formatTime();
     timerFunctionality = setInterval(() => {
@@ -17,6 +19,9 @@ function inputToTime() {
         formatTime();
         if (currentTime <= 0) {
             clearInterval(timerFunctionality)
+
+            timer.textContent = 'END';
+            timer.classList.add('end');
         };
     }, 1000);
 

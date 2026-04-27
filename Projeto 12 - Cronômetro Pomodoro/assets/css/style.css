@@ -37,3 +37,8 @@ h1 {
 .hidden {
     display: none;
 }
+
+.end {
+    color: red;
+    font-size: 50px;
+}
