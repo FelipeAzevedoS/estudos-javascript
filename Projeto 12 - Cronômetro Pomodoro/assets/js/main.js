@@ -24,6 +24,7 @@ function timeStarter() {
 };
         
 function inputToTime() {
+    if (!timeInput.value || Number(timeInput.value) <= 0) return;
     clearInterval(timerFunctionality);
 
     timer.classList.remove('end');
@@ -35,14 +36,15 @@ function inputToTime() {
     timer.classList.remove('hidden');
     timeInput.classList.add('hidden');
     chooseMinutes.classList.add('hidden');
+    pause.textContent = 'Pause';
 };
 
 function formatTime () {
     
-    let formatedMinutes = Math.floor(currentTime / 60);
-    let formatedSeconds = currentTime % 60;
+    let formattedMinutes = Math.floor(currentTime / 60);
+    let formattedSeconds = currentTime % 60;
 
-    timer.textContent = `${String(formatedMinutes).padStart(2, '0')}:${String(formatedSeconds).padStart(2, '0')}`;
+    timer.textContent = `${String(formattedMinutes).padStart(2, '0')}:${String(formattedSeconds).padStart(2, '0')}`;
 };
 
 function pauseTime () {
