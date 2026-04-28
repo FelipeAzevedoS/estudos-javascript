@@ -57,5 +57,18 @@ function pauseTime () {
     }
 };
 
+function resetTimer () {
+    clearInterval(timerFunctionality);
+
+    isRunning = false;
+    timeInput.value = '';
+    timer.classList.add('hidden');
+    timeInput.classList.remove('hidden');
+    chooseMinutes.classList.remove('hidden');
+    timer.classList.remove('end');
+    pause.textContent = 'Pause';
+};
+
 start.addEventListener ('click', inputToTime);
 pause.addEventListener ('click', pauseTime);
+reset.addEventListener ('click', resetTimer);
