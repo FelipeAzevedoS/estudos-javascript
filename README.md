@@ -59,3 +59,8 @@ Rock, paper and scissors game, with scoreboard and round results.
 Web page containing a simple quiz about Brazil.
 
 **Practiced concepts:** Array of objects, object property access, event and event.target, optional parameter with conditional check, full state reset.
+
+### Project 12 - Countdown timer / Pomodoro
+Web page containing a countdown timer, with start, pause and reset features.
+
+**Practiced concepts:** setInterval and clearInterval, state management with boolean variable, extracting logic into reusable functions, Math.floor and modulo operator (%) to format time, String.padStart().
