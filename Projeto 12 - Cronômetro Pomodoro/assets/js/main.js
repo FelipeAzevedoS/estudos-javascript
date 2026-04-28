@@ -7,28 +7,34 @@ const chooseMinutes = document.querySelector('#chooseMinutes');
 
 let currentTime;
 let timerFunctionality;
-        
-function inputToTime() {
-    clearInterval(timerFunctionality);
-    timer.classList.remove('end');
+let isRunning = false;
 
-    currentTime = Number(timeInput.value) * 60;
-    formatTime();
+function timeStarter() {
     timerFunctionality = setInterval(() => {
         currentTime--;
         formatTime();
         if (currentTime <= 0) {
-            clearInterval(timerFunctionality)
-
+            clearInterval(timerFunctionality);
+            isRunning = false;
             timer.textContent = 'END';
             timer.classList.add('end');
         };
     }, 1000);
+    isRunning = true;
+};
+        
+function inputToTime() {
+    clearInterval(timerFunctionality);
+
+    timer.classList.remove('end');
+
+    currentTime = Number(timeInput.value) * 60;
+    formatTime();
+    timeStarter();
 
     timer.classList.remove('hidden');
     timeInput.classList.add('hidden');
     chooseMinutes.classList.add('hidden');
-    
 };
 
 function formatTime () {
@@ -39,4 +45,17 @@ function formatTime () {
     timer.textContent = `${String(formatedMinutes).padStart(2, '0')}:${String(formatedSeconds).padStart(2, '0')}`;
 };
 
+function pauseTime () {
+    if (isRunning) {
+        clearInterval(timerFunctionality);
+        pause.textContent = 'Restart';
+        isRunning = false;
+    } else {
+        timeStarter();
+        isRunning = true;
+        pause.textContent = 'Pause';
+    }
+};
+
 start.addEventListener ('click', inputToTime);
+pause.addEventListener ('click', pauseTime);
