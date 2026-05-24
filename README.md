@@ -64,3 +64,8 @@ Web page containing a simple quiz about Brazil.
 Web page containing a countdown timer, with start, pause and reset features.
 
 **Practiced concepts:** setInterval and clearInterval, state management with boolean variable, extracting logic into reusable functions, Math.floor and modulo operator (%) to format time, String.padStart().
+
+### Project 13 - Shopping list
+Web page containing a shopping list where users can add and delete items, with data persisting across page reloads.
+
+**Practiced concepts:** localStorage(JSON.parse, JSON.stringify, getItem, setItem), array manipulation, syncing array state with localStorage, create HTML elements dynamically (document.createElement), "typeof" for variable verification.
